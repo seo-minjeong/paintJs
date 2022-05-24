@@ -67,3 +67,20 @@ body {
 .controls .controls_range {
     margin-bottom: 30px;
 }
+#jsRange {
+    color: #000;
+}
+#jsRange[type="range"]::-ms-track {
+    background: #fff;
+    border-color: transparent;
+    color: transparent;
+}
+#jsRange[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #000;
+    cursor: pointer;
+    border: 1px solid #000000;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+}

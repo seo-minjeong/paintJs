@@ -122,3 +122,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+}
+input[type="range"]:focus {
+    outline: none;
+}
