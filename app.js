@@ -4,6 +4,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const removeBtn = document.getElementById("jsRemove");
 
 // 기본 붓 컬러값 저장.
 const INITIAL_COLOR = "#2c2c2c";
@@ -106,8 +107,20 @@ if (canvas) {
     canvas.addEventListener("contextmenu", handleCM);
 }
 
+// 지우기
+function handleRemoveClick() {
+    ctx.fillStyle = INITIAL_COLOR;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    restore_array = [];
+    index = -1;
+}
+
 // colors에 있는 색깔 배열을 가져오는 작업.
-Array.from(colors).forEach((color) => color.addEventListener("click", handleColorClick));
+Array.from(colors).forEach((color) =>
+    color.addEventListener("click", handleColorClick)
+);
 
 if (range) {
     range.addEventListener("input", handleRangeChange);
@@ -119,4 +132,7 @@ if (mode) {
 
 if (saveBtn) {
     saveBtn.addEventListener("click", handleSaveClick);
+}
+if (removeBtn) {
+    removeBtn.addEventListener("click", handleRemoveClick);
 }
