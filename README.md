@@ -1,2 +1,3 @@
-# paintJs
-Painting Board made with VanilaJs
+# Paint Js
+
+✏️ 바닐라 JS를 사용해 만든 그림판 프로젝트입니다.
